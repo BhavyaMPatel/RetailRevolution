@@ -1,15 +1,30 @@
-import './App.css'
+import { useState ,useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InformationHader from './HomePageComponent/InformationHader'
 import Navbar from './HomePageComponent/Navbar'
-// import Slider from './HomePageComponent/Slider'
+import Loader from './LoadingPage/Loader'
+import DashBoardPage from './UserDashBoard/DashBoardPage';
+import './App.css'
 
 function App() {
+  const [Loading,SetLoading]=useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      SetLoading(false);
+    },1000);
+  },[]);
 
   return (
     <>
-     <Navbar/>
-     <InformationHader/>
-     
+     <Router>
+        <Routes>
+              {
+               Loading ? <Route exact path='/' element={<Loader/>}></Route>: <Route exact path='/' element={<><Navbar/><InformationHader/></>}></Route> 
+              }
+              <Route exact path='/Dashboard' element={<><Navbar/><DashBoardPage/></>}>J</Route>
+        </Routes>
+    </Router>
     </>
   )
 }
