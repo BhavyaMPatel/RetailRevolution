@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 
 export default function DashBoardPage() {
 
- function SendFile(e){
+const [Data,SetData] = useState([]);
+
+useEffect(()=>{
+  fetch('http://localhost:8000/data')
+  .then(response => response.json())
+  .then(data => {
+  // Update the options state
+  SetData(data);
+  console.log(data);
+  });
+},[]);
+
+function SendFile(e){
+
     e.preventDefault()
     console.log('Send File')
 

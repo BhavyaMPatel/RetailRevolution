@@ -1,18 +1,25 @@
 from fastapi import FastAPI
-
+from flask import Flask
+from flask_cors import CORS
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.metrics import r2_score, mean_absolute_error
-import numpy as np
-from xgboost import XGBRegressor
 import joblib
 preprocessor = joblib.load('preprocessor.pkl')
 loaded_model = joblib.load('model.pkl')
 
 
 app = FastAPI()
+origins = [
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -27,9 +34,12 @@ def read_data():
     top_selling_indices = new_predictions.argsort()[-10:][::-1]
     top_selling_stockcodes = df.loc[top_selling_indices, 'StockCode']
     top_selling_quantities = new_predictions[top_selling_indices]
-    print("\nTop Selling Items and Predicted Quantities:")
+    top_selling_items = []
     for stockcode, quantity in zip(top_selling_stockcodes, top_selling_quantities):
-        print(f"StockCode: {stockcode}, Predicted Quantity: {quantity:.2f}")
+        item = {'StockCode': stockcode, 'PredictedQuantity': float(quantity)}
+        top_selling_items.append(item)
 
-    return {"Hello": "Python"}
+
+    return top_selling_items
+
 
