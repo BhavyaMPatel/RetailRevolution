@@ -50,6 +50,6 @@ async def read_data(background_tasks: BackgroundTasks,file:UploadFile=File(...))
     background_tasks.add_task(file.file.close)
 
     # return top_selling_items
-    return {"high": top_selling_items}
+    return {"data": top_selling_items}
 
 
