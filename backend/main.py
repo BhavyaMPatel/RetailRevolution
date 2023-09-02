@@ -1,6 +1,4 @@
 from fastapi import FastAPI, File, UploadFile,BackgroundTasks
-from flask import Flask
-from flask_cors import CORS
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import joblib
