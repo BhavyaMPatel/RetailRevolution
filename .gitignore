@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 frontend/public/AICTE Batch 1 Index File .pdf
 Innovators_RetailRevolutioner.pptx
+frontend/src/firebase.jsx
+.gitignore
+.gitignore
+frontend/.gitignore
+.gitignore

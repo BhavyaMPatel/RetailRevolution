@@ -11,7 +11,7 @@ loaded_model = joblib.load('model.pkl')
 
 app = FastAPI()
 origins = [
-    "http://localhost:5173",
+    "*",
 ]
 
 app.add_middleware(

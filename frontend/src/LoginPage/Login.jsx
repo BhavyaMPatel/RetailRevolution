@@ -7,7 +7,7 @@ const [password,setpassword]=useState('');
 
 async function LoginFunction(e){
     e.preventDefault();
-    window.location.href="/Dashboard";
+    window.location.href="/dashboard";
 
     // const useriderror=document.querySelector('#useriderror');
     // const passworderror=document.querySelector('#passworderror');

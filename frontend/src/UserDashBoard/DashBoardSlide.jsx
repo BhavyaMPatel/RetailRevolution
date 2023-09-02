@@ -12,7 +12,7 @@ async function Upload_File(e){
     SetUploading(true);
     e.preventDefault();
     formData.append("file",File);
-    const response =  await fetch('http://localhost:8000/data',{
+    const response =  await fetch('http://127.0.0.1:8000/data',{
     method: 'POST',
     body: formData
     })
