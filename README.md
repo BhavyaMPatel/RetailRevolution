@@ -2,11 +2,19 @@
 
 <br />
 
+
+
 ```
 RetailRevolutioner
 ```
 <h2> About The Application 🚀 </h2> 
 <br />
+
+```
+Login Credential In WebApp - Prototype
+UserName  - guest
+Password  - guest
+```
 
 ```
 RetailRevolutioner, aims to provide a solution to the problem of accurately
