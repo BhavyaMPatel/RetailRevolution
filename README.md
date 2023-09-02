@@ -44,7 +44,18 @@ POST API
 <img height="50" src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png">
 </div>
 <h2></h2>
-  
+
+<h2>Preview</h2>
+<h2>User Route</h2>
+<img src="https://github.com/BhavyaMPatel/Accenture_Prototype/blob/main/ReadMe/I2.png">
+<img src="https://github.com/BhavyaMPatel/Accenture_Prototype/blob/main/ReadMe/I3.png">
+<img src="https://github.com/BhavyaMPatel/Accenture_Prototype/blob/main/ReadMe/I4.png">
+<img src="https://github.com/BhavyaMPatel/Accenture_Prototype/blob/main/ReadMe/I8.png">
+
+<h2>Responce</h2>
+<img src="https://github.com/BhavyaMPatel/Accenture_Prototype/blob/main/ReadMe/I1.png">
+
+
 <h2>Follow This Step to Clone This Repo On Your Local System</h2>
 
 ```
