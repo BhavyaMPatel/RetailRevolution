@@ -31,6 +31,13 @@ POST API
 2 . /data         - Upload Request And Retrive Top 10 Data
 ```
 
+```
+Frontend of Application Is Deploy On Firebase - https://retailrevolutioner.web.app/
+Backend  of Application Is Still On Local Envirnoment Soon We Will Launch It To EC2
+So Till Then We Can't Get Data From Backend Beacause Local Server Is off 🥲
+But Soon It Will Be Live 🔥✈️
+
+```
 
 <h2> Technology Used </h2>
 <div style="display:flex ">
