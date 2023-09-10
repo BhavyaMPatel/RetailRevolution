@@ -90,7 +90,7 @@ Then
 3.Cd into backend folder
   -cd backend
 4.Run This Command
--> pip install fastapi pandas joblib xgboost scikit-learn uvicorn
+-> pip install fastapi pandas joblib xgboost scikit-learn uvicorn python-multipart
   This Command install required library
 -> run this command to run server : uvicorn main:app --reload
 
