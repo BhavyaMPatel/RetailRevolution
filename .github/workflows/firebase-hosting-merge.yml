@@ -14,7 +14,7 @@ jobs:
       - run: cd frontend && npm ci && npm run build 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "https://github.com/BhavyaMPatel/Accenture_Prototype/tree/main/frontend/"
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RETAILREVOLUTIONER }}'
           channelId: live
           projectId: retailrevolutioner
