@@ -20,9 +20,6 @@ function App() {
     <>
      <Router>
         <Routes>
-              {
-               Loading ? <Route exact path='/' element={<Loader/>}></Route>: <Route exact path='/' element={<><Navbar/><InformationHader/></>}></Route> 
-              }
               <Route exact path='/dashboard' element={<><Navbar/><DashBoardPage/></>}></Route>
         </Routes>
     </Router>
